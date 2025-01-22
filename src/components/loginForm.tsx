@@ -6,13 +6,13 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { db, USERS_COLLECTION } from '@/apis/firebase';
 
 import { auth } from '@/apis/firebase';
-import { Button, TextField, Typography, Box, FormControl, Divider } from '@mui/material';
+import { Button, TextField, Typography, Box, Divider } from '@mui/material';
 import { useRouter } from 'next/navigation';
 
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '@/store';
 import { loginSuccess } from '@/store/userSlice';
-import { GoogleIcon, FacebookIcon, SitemarkIcon } from '@/components/customIcon';
+import { GoogleIcon, FacebookIcon } from '@/components/customIcon';
 
 
 const LoginForm: React.FC = () => {

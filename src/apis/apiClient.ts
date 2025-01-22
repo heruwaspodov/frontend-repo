@@ -68,7 +68,10 @@ class ApiClient {
     }
   }
 
-  async post<T>(url: string, data: any): Promise<ApiResponse<T>> {
+  async post<T>(
+    url: string,
+    data: Record<string, unknown>
+  ): Promise<ApiResponse<T>> {
     try {
       const response: AxiosResponse<ApiResponse<T>> = await this.api.post(
         url,
@@ -80,7 +83,7 @@ class ApiClient {
     }
   }
 
-  private handleError(error: any): Error {
+  private handleError(error: unknown): Error {
     if (axios.isAxiosError(error)) {
       return new Error(
         error.response?.data?.message || "An error occurred during the request"

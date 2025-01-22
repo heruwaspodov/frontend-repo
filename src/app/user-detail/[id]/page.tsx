@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Avatar, Button, Card, CardContent, Divider, Paper, Stack, TextField, Typography, Box } from '@mui/material';
 import { Person as PersonIcon } from '@mui/icons-material';
 import { useParams } from 'next/navigation'; 
-import { apiClient, apiBaseUrl, ApiResponse } from '@/apis/apiClient';
+import { apiClient, apiBaseUrl } from '@/apis/apiClient';
 import { UserData } from '@/types/user';
 import { withAuth, WithAuthProps } from '@/hooks/withAuth';
 import Toast from '@/components/toast';
@@ -14,7 +14,7 @@ import { logout } from '@/store/userSlice';
 
 type UserDetailPageProps = WithAuthProps;
 
-const UserDetailPage: React.FC<UserDetailPageProps> = ({ email, accessToken, name, lastLogin }) => {
+const UserDetailPage: React.FC<UserDetailPageProps> = () => {
   const { id } = useParams(); 
   const [user, setUser] = useState({
     email: '',
@@ -71,6 +71,7 @@ const UserDetailPage: React.FC<UserDetailPageProps> = ({ email, accessToken, nam
       setUser(data);
       setToast({ open: true, message: 'User data updated successfully!', severity: 'success' });
     } catch (error) {
+      console.log(error)
       setToast({ open: true, message: 'Failed to update user data.', severity: 'error' });
     }
   };
