@@ -1,4 +1,4 @@
-# backend-repo
+# frontend-repo
 
 ## About
 
