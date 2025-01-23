@@ -12,9 +12,10 @@ import {
   Stack,
   Button
 } from '@mui/material';
-import { withAuth, WithAuthProps } from '@/hooks/withAuth';
+import { withAuth } from '@/hooks/withAuth';
 import { Person as PersonIcon } from '@mui/icons-material';
 import Link from 'next/link';
+import { WithAuthProps } from '@my-turborepo/shared-types';
 
 type UserDetailPageProps = WithAuthProps;
 

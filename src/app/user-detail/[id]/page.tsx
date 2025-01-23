@@ -5,8 +5,8 @@ import { Avatar, Button, Card, CardContent, Divider, Paper, Stack, TextField, Ty
 import { Person as PersonIcon } from '@mui/icons-material';
 import { useParams } from 'next/navigation'; 
 import { apiClient, apiBaseUrl } from '@/apis/apiClient';
-import { UserData } from '@/types/user';
-import { withAuth, WithAuthProps } from '@/hooks/withAuth';
+import { UserData, WithAuthProps } from '@my-turborepo/shared-types';
+import { withAuth } from '@/hooks/withAuth';
 import Toast from '@/components/toast';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '@/store';

@@ -4,14 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { AppDispatch, RootState } from "@/store";
 import { loadUserFromStorage } from "@/store/userSlice";
 import { Box, Typography } from "@mui/material";
-
-export type WithAuthProps = {
-  email: string | null;
-  id: string | null;
-  accessToken: string | null;
-  name: string | null;
-  lastLogin: string | null;
-};
+import { WithAuthProps } from '@my-turborepo/shared-types';
 
 export const withAuth = <P extends WithAuthProps>(
   WrappedComponent: React.ComponentType<P>

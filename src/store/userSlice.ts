@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { UserState } from "@/types/user";
+import { UserState } from "@my-turborepo/shared-types";
 
 const initialState: UserState = {
   email: null,
